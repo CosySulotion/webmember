@@ -1,0 +1,18 @@
+extends layout.jade
+
+block content
+    div.panel.panel-info
+        div.panel-heading
+            h3.panel-title #{title}
+
+        div.panel-body
+            div.container(data-ng-cloak, data-ng-app="userModule", data-ng-controller="userController")
+
+            form.navbar-form.navbar-left(role="search", method="POST", name="formUser")
+                div.row
+                    div.form-group
+                        label(for="") ID
+
+                        input.form-control(type="text", placeholder="Please enter id", name="memCode", id="memCode", ng-model="user.memCode",
+                        style="width:100%", required)
+
